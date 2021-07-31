@@ -1,0 +1,23 @@
+INÍCIO JOGO
+	colocar pinguim filho vermelho
+	colocar pinguim pai vermelho
+	atravessar
+	deixar pai vermelho
+	atravessar
+	colocar filho verde
+	atravessar
+	deixar filho vermelho 
+	atravessar
+	colocar pai verde
+	atravessar
+	deixar pai verde
+	atravessar
+	colocar filho azul
+	atravessar
+	deixar filho verde
+	atravessar
+	colocar pai azul
+	atravessar
+	deixar pai azul
+	deixar filho azul
+FIM DO JOGO
