@@ -1,8 +1,8 @@
 package dio.digbank
 
 class Cliente(
-    override val nome:String,
-    override val cpf:String,
+    nome:String,
+    cpf:String,
     val tipo: clienteTipo
 ):Pessoa(nome, cpf){
     override fun toString(): String {
