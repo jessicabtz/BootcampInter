@@ -13,10 +13,10 @@ class MainActivity : AppCompatActivity() {
         val calcular = calcular
         val resultado = resultado
         calcular.setOnClickListener {
-            val nota1 = Integer.parseInt(nota1.text.toString())
-            val nota2 = Integer.parseInt(nota2.text.toString())
+            val nota1 = nota1.text.toString()
+            val nota2 = nota2.text.toString()
             val faltas = Integer.parseInt(faltas.text.toString())
-            val media = (nota1+nota2)/2
+            val media = (nota1.toFloat()+nota2.toFloat())/2
             if(media>=6 && faltas<=10) {
                 resultado.setText("O aluno foi aprovado!\nNota final: ${media}\nFaltas: ${faltas}")
                 resultado.setTextColor(Color.GREEN)
