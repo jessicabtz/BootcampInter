@@ -3,4 +3,6 @@
     <string name="descricao_campo">Foto do Contato</string>
     <string name="menu_1">Menu 1</string>
     <string name="menu_2">Menu 2</string>
+    <string name="open">Abrir</string>
+    <string name="close">Fechar</string>
 </resources>
