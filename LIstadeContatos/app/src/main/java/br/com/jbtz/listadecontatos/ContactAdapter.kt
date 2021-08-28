@@ -3,6 +3,8 @@ package br.com.jbtz.listadecontatos
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class ContactAdapter : RecyclerView.Adapter<ContactAdapter.ContactAdapterViewHolder>(){// fazer o gerenciamento da lista como um td
@@ -21,9 +23,20 @@ class ContactAdapter : RecyclerView.Adapter<ContactAdapter.ContactAdapterViewHol
         holder.bind(list[position])
     }
 
-    class ContactAdapterViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView){ // gerencia cada elemento da lita
-        fun bind(contact: Contact){
+    fun updateList(list: List<Contact>){
+        this.list.clear()
+        this.list.addAll(list)
+        notifyDataSetChanged()
+    }
 
+    class ContactAdapterViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView){ // gerencia cada elemento da lita
+        private val tvName: TextView   = itemView.findViewById(R.id.tv_name)
+        private val tvPhone: TextView  = itemView.findViewById(R.id.tv_phone)
+        private val ivPhoto: ImageView = itemView.findViewById(R.id.iv_photo)
+
+        fun bind(contact: Contact){
+            tvName.text  = contact.name
+            tvPhone.text = contact.phone
         }
     }
 }
