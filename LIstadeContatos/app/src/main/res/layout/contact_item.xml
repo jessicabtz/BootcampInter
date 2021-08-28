@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="6dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -17,7 +20,7 @@
             app:layout_constraintTop_toTopOf="@+id/tv_name"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@+id/tv_phone"
-            android:contentDescription=""
+            android:contentDescription="@string/descricao_campo"
             tools:src = "@tools:sample/avatars"/>
 
         <TextView
@@ -28,7 +31,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            app:layout_constraintTop_toTopOf="@+id/iv_photo"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iv_photo"
             tools:text="Nome do Contato" />
 
