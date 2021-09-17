@@ -1,5 +1,6 @@
 package br.com.jbtz.listadecontatos
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Message
@@ -10,10 +11,11 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import br.com.jbtz.listadecontatos.ContactDetails.Companion.EXTRA_CONTACT
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), ClickItemContactListener {
     private val rvList: RecyclerView by lazy { findViewById<RecyclerView>(R.id.rv_list) }
-    private val adapter = ContactAdapter()
+    private val adapter = ContactAdapter(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,5 +72,11 @@ class MainActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    override fun clickItemContact(contato: Contact) {
+        val intent = Intent(this, ContactDetails::class.java)
+        intent.putExtra(EXTRA_CONTACT, contato)
+        startActivity(intent)
     }
 }
