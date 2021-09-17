@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TesteVModel</string>
+    <string name="contador">Contador</string>
+</resources>
