@@ -13,7 +13,7 @@ import br.com.jbtz.cartaodevisita.databinding.BusinessCardBinding
 class BusinessCardAdapter :
     ListAdapter<BusinessCard, BusinessCardAdapter.ViewHolder>(DiffCallback()) {
 
-        var listenerShare:(View) -> Unit = {}
+    var listenerShare:(View) -> Unit = {}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)

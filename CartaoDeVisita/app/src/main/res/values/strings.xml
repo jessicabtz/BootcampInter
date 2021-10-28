@@ -11,4 +11,5 @@
     <string name="alt_cor">alterar cor</string>
     <string name="cor">Cor de fundo</string>
     <string name="label_show_success">Cartão Cadastrado com sucesso</string>
+    <string name="label_share">Compartilhar</string>
 </resources>
