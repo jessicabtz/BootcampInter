@@ -9,4 +9,6 @@
     <string name="site">Seu site</string>
     <string name="salvar">SALVAR</string>
     <string name="alt_cor">alterar cor</string>
+    <string name="cor">Cor de fundo</string>
+    <string name="label_show_success">Cartão Cadastrado com sucesso</string>
 </resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.addBusinessCardActivity">
+    tools:context=".ui.addBusinessCardActivity">
 
     <ImageButton
         android:id="@+id/btn_close"
@@ -30,9 +30,9 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nv_nome"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="12dp"
         android:hint="@string/nome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +48,7 @@
         android:id="@+id/nv_telefone"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_margin="16dp"
         android:hint="@string/telefone"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +65,7 @@
         android:id="@+id/nv_email"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_margin="16dp"
         android:hint="@string/email"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +82,7 @@
         android:id="@+id/nv_site"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_margin="16dp"
         android:hint="@string/site"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,14 +92,14 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="text" />
+            android:inputType="textUri" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nv_empresa"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_margin="16dp"
         android:hint="@string/empresa"
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,33 +112,31 @@
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_altCor"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nv_cor"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/alt_cor"
-        app:layout_constraintStart_toStartOf="@id/nv_empresa"
-        app:layout_constraintEnd_toStartOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@id/nv_empresa"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="10dp"
-        app:cornerRadius="8dp"/>
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:hint="@string/cor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nv_empresa">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_save"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/salvar"
-        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/nv_empresa"
         app:layout_constraintEnd_toEndOf="@id/nv_empresa"
-        app:layout_constraintTop_toBottomOf="@id/nv_empresa"
+        app:layout_constraintTop_toBottomOf="@id/nv_cor"
         android:layout_marginTop="16dp"
         android:layout_marginStart="10dp"
         app:cornerRadius="8dp"/>
